@@ -30,7 +30,7 @@ p = figure(title = "OECD Countries from 2010-2018")
 p.xaxis.axis_label = 'health ex per capita'
 p.yaxis.axis_label = 'life expectancy'
 p = figure(plot_width=600, plot_height=450, title = "OECD Countries from 2010-2018",toolbar_location=None,
-          tools="hover", tooltips="@Country_x: @pop")
+          tools="hover", tooltips="@Country: @pop")
 p.scatter('lifeX','healthExp', source=df, fill_alpha=0.6, size=10)
 p.xaxis.axis_label = 'life expectancy'
 p.yaxis.axis_label = 'health expense'
@@ -56,7 +56,7 @@ p = figure(title = "OECD Countries 2015")
 p.xaxis.axis_label = 'health ex per capita'
 p.yaxis.axis_label = 'life expectancy'
 p = figure(plot_width=600, plot_height=450, title = "Testing",toolbar_location=None,
-          tools="hover", tooltips="@Country_x: @pop")
+          tools="hover", tooltips="@Country: @pop")
 p.scatter('lifeX','healthExp', source=p2015, fill_alpha=0.4, size=10)
 p.xaxis.axis_label = 'life expectancy'
 p.yaxis.axis_label = 'health expense'
