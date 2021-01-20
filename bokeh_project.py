@@ -29,7 +29,7 @@ x_values = 'healthX'
 p = figure(title = "OECD Countries from 2010-2018")
 p.xaxis.axis_label = 'health ex per capita'
 p.yaxis.axis_label = 'life expectancy'
-p = figure(plot_width=600, plot_height=450, title = "Testing",toolbar_location=None,
+p = figure(plot_width=600, plot_height=450, title = "OECD Countries from 2010-2018",toolbar_location=None,
           tools="hover", tooltips="@Country_x: @pop")
 p.scatter('lifeX','healthExp', source=df, fill_alpha=0.6, size=10)
 p.xaxis.axis_label = 'life expectancy'
