@@ -33,7 +33,7 @@ x_values = 'healthX'
 p = figure(title = "OECD Countries from 2010-2018")
 p.xaxis.axis_label = 'health ex per capita'
 p.yaxis.axis_label = 'life expectancy'
-df['popSize'] = df['pop'] / 1000000
+df['popSize'] = df['pop'] / 10000000
 p = figure(plot_width=600, plot_height=450, title = "OECD Countries from 2010-2018",toolbar_location=None,
           tools="hover", tooltips="@Country: @pop")
 p.scatter('healthExp','lifeX', source=df, fill_alpha=0.6, size='popSize')
