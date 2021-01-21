@@ -35,7 +35,7 @@ p.xaxis.axis_label = 'health ex per capita'
 p.yaxis.axis_label = 'life expectancy'
 p = figure(plot_width=600, plot_height=450, title = "OECD Countries from 2010-2018",toolbar_location=None,
           tools="hover", tooltips="@Country: @pop")
-p.scatter('healthExp','lifeX', source=df, fill_alpha=0.6, size=10)
+p.scatter('healthExp','lifeX', source=df, fill_alpha=0.6, size=df["pop"]/1000000)
 healthX_slider = Slider(start=0, end=10000, value=1, step=1000, title="Health Expense")
 lifeX_slider = Slider(start=0, end=100, value=1, step=1, title="Life Expectancy")
 pop_slider = Slider(start=0, end=1000000000, value=1, step=10000, title="Population")
