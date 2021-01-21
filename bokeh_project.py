@@ -37,6 +37,8 @@ df['popSize'] = df['pop'] / 1000000
 p = figure(plot_width=1000, plot_height=650, title = "OECD Countries from 2010-2018",toolbar_location=None,
           tools="hover", tooltips="@Country: @pop")
 p.scatter('healthExp','lifeX', source=df, fill_alpha=0.6, size='popSize')
+p.xaxis.axis_label = 'health expense'
+p.yaxis.axis_label = 'life expectancy'
 healthX_slider = Slider(start=0, end=10000, value=1, step=1000, title="Health Expense")
 lifeX_slider = Slider(start=0, end=100, value=1, step=1, title="Life Expectancy")
 pop_slider = Slider(start=0, end=1000000000, value=1, step=10000, title="Population")
